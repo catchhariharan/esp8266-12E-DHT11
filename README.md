@@ -9,25 +9,26 @@ Hardware used:
 3. Raspberry Pi 3 (optional)
 
 Software used:
-Arduino IDE to program ESP8266 - used nodemcu v1.0 board
-Arduino IDE is loaded in the Raspberry Pi 3
+1. Arduino IDE to program ESP8266 - used nodemcu v1.0 board
+2. Arduino IDE is loaded in the Raspberry Pi 3
 
 Hardware connection ESP8266 to DHT:
-Pin2 is used in software config of DHT, which is data pin of the sensor (note: which is D4 in the development board)
-Sensor positive is connected 3V3 (next pin to D4 in dev board)
-Sensor negative is connected to GND (nect pin to 3V3 in dev board)
+1. Pin2 is used in software config of DHT, which is data pin of the sensor (note: which is D4 in the development board)
+2. Sensor positive is connected 3V3 (next pin to D4 in dev board)
+3. Sensor negative is connected to GND (next pin to 3V3 in dev board)
 
 Software Configurations:
-HTTP basic client logic used in the Arduinoi IDE
-Included DHT sensor library
+1. HTTP basic client logic used in the Arduinoi IDE
+2. Included DHT sensor library
 
 Server side configurations:
-created a sub domain iot
-if you are using raspberry pi as server ensure permissions is given to read/write from www
+1. created a sub domain iot
+2. If you are using raspberry pi as server ensure permissions is given to read/write from www
 use below command
+
 sudo chown -R www-data: *
 
-Raspberry Pi3 as Host
+Raspberry Pi3 as Host:
 1. Loaded hostapd, dnsmasq and apache, php5 in raspberry pi, 
 2. used internal wifi dongle and external wifi dongle created a tunnel to wlan1
 sudo iptables -t nat -A POSTROUTING -o wlan1 -j MASQUERADE
