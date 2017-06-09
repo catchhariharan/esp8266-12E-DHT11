@@ -1,0 +1,42 @@
+<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+<script>
+    function myClick()
+    {
+        var url = 'buttonopen.php'; //put the url for the php
+        $.post(url, {});
+    }
+
+    $("document").ready(
+        function()
+        {
+            setInterval(
+                function()
+                {
+                    $("#theDiv").load('buttonopen.php');
+                },
+                500
+            );
+        }
+    );
+</script>
+
+<script> 
+   $(function(){
+       $('#filename').load("dataDisplayer.html");
+   });
+</script>
+
+<Title> IOT Application </Title>
+<H1> IOT APPLICATION </H1>
+
+<div id="theDiv"></div>
+<input type="button" value="Door Open" onmousedown="myClick()" onmouseup="myClick()">
+
+<H4> Keep the button pressed until the Door is Open</H4>
+
+<H3> Sensor Readings </H3>
+
+<H4> Below is the Humidity and temperature Sensor readings </H4>
+
+<div id="filename">
+</div>
