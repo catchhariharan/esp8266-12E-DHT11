@@ -27,7 +27,7 @@ ESP8266WiFiMulti WiFiMulti;
 
 
 
-String server = "http://svaasya.com/iot/";
+String server = "http://172.24.1.1/iot/";
 String myAP;
 String payload = "";      
 
